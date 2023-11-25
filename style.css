@@ -1,0 +1,116 @@
+html{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stage{
+    height: 100%;
+    width: 100%;
+    background-image: url("1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 0.1s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.stagehover:hover{
+    transition-duration: 0.2s;
+}
+
+.lamp{
+    background-image: url('lamp.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    z-index: 4;
+}
+
+.magician{
+    background-image: url('2.jpg');
+    background-size: contain;
+    width: 300px;
+    height: 300px;
+    z-index: 3;
+    background-repeat: no-repeat;
+}
+
+.show2{
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+    visibility: hidden;
+}
+
+.stagemagician{
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hat{
+    background-image: url('hat.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
+    width: 200px;
+    height: 200px;
+    z-index: 4;
+}
+
+#animals{
+    background-size: contain;
+    position: relative;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    transition: top 0.5s;
+    top: 0px;
+}
+
+#animals.bird{
+    z-index: 4;
+    background-image: url('pigeon.png');
+}
+
+#animals.rabbit{
+    z-index: 4;
+    background-image: url('rabbit.png');
+}
+
+.light{
+    position: absolute;
+    height: 0;
+    top: 85px;
+    border-bottom: 900px solid rgba(255, 251, 27,0.199);
+    border-left: 465px solid transparent;
+    border-right: 465px solid transparent;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90px;
+    visibility: hidden;
+    z-index: 3;
+}
+
+.transitionShow{
+    position: absolute;
+    top: -100%;
+    transition: all 2s;
+}
